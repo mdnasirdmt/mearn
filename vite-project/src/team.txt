@@ -1,0 +1,64 @@
+To create a form in React that stores the form values in an array and posts it to a database, you can use the `useState` hook. Here is an example of how you can create a form with the fields you mentioned:
+
+```javascript
+import React, { useState } from 'react';
+
+function Form() {
+  const [formValues, setFormValues] = useState([]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const formObject = Object.fromEntries(formData.entries());
+    setFormValues([...formValues, formObject]);
+    // post the data to the database here
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label htmlFor="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label htmlFor="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required />
+
+      <label htmlFor="address">Address:</label>
+      <input type="text" id="address" name="address" required />
+
+      <label htmlFor="nationality">Nationality:</label>
+      <input type="text" id="nationality" name="nationality" required />
+
+      <label htmlFor="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="">--Please choose an option--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label htmlFor="married">Are you married?</label>
+      <select id="married" name="married">
+        <option value="">--Please choose an option--</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+
+In this example, we use the `useState` hook to create a state variable called `formValues`, which is initialized as an empty array. When the form is submitted, we prevent the default form submission behavior and create a new `FormData` object from the event target. We then convert this object to a plain JavaScript object using `Object.fromEntries(formData.entries())`. Finally, we add this object to the `formValues` array using the spread operator.
+
+To post the data to a database, you can use a library like Axios or fetch. You will need to make an HTTP request to your server with the data you want to store in the database.
+
+I hope this helps!
+
+Source: Conversation with Bing, 17/10/2023
+(1) reactjs - Form Data storing in array format - Stack Overflow. https://stackoverflow.com/questions/58967034/form-data-storing-in-array-format.
+(2) javascript - React Input Form Value In An Array - Stack Overflow. https://stackoverflow.com/questions/63859147/react-input-form-value-in-an-array.
+(3) Using the useState Hook and Working with Forms in React.js.. https://dev.to/heyjoshlee/using-the-usestate-hook-and-working-with-forms-in-react-js-m6b.

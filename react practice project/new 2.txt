@@ -1,0 +1,70 @@
+1. react mdn
+
+https://react.dev/learn
+
+
+2. html-to-jsx converter
+
+https://transform.tools/html-to-jsx
+
+
+https://react.dev/reference/react
+https://create-react-app.dev/docs/getting-started
+
+/////////////////////////////////////////////////////////////////////////////////////
+3. vite 
+https://vitejs.dev/guide/
+
+4. yarn
+https://yarnpkg.com/getting-started
+to install vite and with yarn 
+step by step process;
+
+
+1. install yarn locally
+		npm install --save-dev yarn
+
+2. install yarn globally
+		npm install -g yarn
+
+
+3. Create a New Vite Project:
+ To create a new Vite project, open your command prompt or terminal and navigate to the directory where you want to create  your project. Then, run the following command, specifying the template you want to use 
+ (e.g., "react", "vue", or "vanilla"):
+
+ 4. Replace <template-name> with the name of the template you want to use, such as "react," "vue," or "vanilla."
+		yarn create vite <project name> --template <template-name>
+
+5. Navigate to Your Vite Project Directory:
+   After the project is created, navigate to the newly created project directory:
+		cd my-vite-app
+
+
+6. Install Project Dependencies:
+   In your project directory, you need to install the project dependencies using Yarn:
+		yarn install
+
+7. Run the Development Server:
+   You can now start the development server and begin working on your Vite project:
+		yarn dev
+
+8. then u will see
+
+C:\react practice project\yarn-vite-app>yarn dev
+yarn run v1.22.19
+$ vite
+Port 5173 is in use, trying another one...
+
+  VITE v4.4.9  ready in 928 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+
+  Shortcuts
+  press r to restart the server
+  press u to show server url
+  press o to open in browser
+  press c to clear console
+  press q to quit
+
