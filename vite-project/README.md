@@ -25,3 +25,20 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+
+…or create a new repository on the command line
+echo "# vite-project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mdnasirdmt/vite-project.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/mdnasirdmt/vite-project.git
+git branch -M main
+git push -u origin main
