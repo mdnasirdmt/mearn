@@ -6,9 +6,11 @@ import SignUp from "./components/SignUp";
 import Navbar from "./components/Navbar";
 import Form from "./components/Form";
 import Tailwind from './components/Tailwind'
-import PysicsWallah from './components/PysicsWallah'
-// import ToDoList from './components/ToDoList'
-// import '../../public/stylesheet/todo.css'
+import {Routes, Route} from 'react-router-dom'
+
+
+
+
 
 function App() {
   let username = [
@@ -20,16 +22,26 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <SignUp />
       <SignIn />
       <Login />
       <OurTeam usernames={username} />
       <Card />
       <Form />
-      <Tailwind/>
-      <PysicsWallah/>
-      {/* <ToDoList /> */}
+      <Tailwind/> */}
+
+      <Routes>
+        <Route path="/" element={<Navbar />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/ourteam" element={<OurTeam usernames={username} />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/tailwind" element={<Tailwind />} />
+      </Routes>
+      
     </>
   );
 }
