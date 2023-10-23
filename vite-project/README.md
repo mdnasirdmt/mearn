@@ -42,3 +42,13 @@ git push -u origin main
 git remote add origin https://github.com/mdnasirdmt/vite-project.git
 git branch -M main
 git push -u origin main
+
+
+
+
+# redux toolkit
+npm install react-redux
+
+# react redux 
+npm install react-redux
+

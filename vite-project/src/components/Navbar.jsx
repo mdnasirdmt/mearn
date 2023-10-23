@@ -1,9 +1,10 @@
 import React from "react";
-import "..//index.css";
+import {Link} from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div>
-      <div className="relative w-full bg-white">
+      <div className="relative w-full bg-zinc-400 m-2">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
           <div className="inline-flex items-center space-x-2">
             <span>
@@ -22,61 +23,36 @@ const Navbar = () => {
             </span>
             <span className="font-bold">DevUI</span>
           </div>
-          <div className="hidden lg:block">
+          
+          <div className="flex justify-between">
             <ul className="inline-flex space-x-8">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Home
-                </a>
+              
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/">Home</Link>
               </li>
 
-              <li>
-                <a
-                  href="#"
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Sign In
-                </a>
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/signup">Sign Up</Link>
               </li>
 
-              <li>
-                <a
-                  href="#"
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Contact
-                </a>
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/signin">Sign In</Link>
               </li>
 
-              <li>
-                <a
-                  href="#"
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
-                >
-                  Sign Up
-                </a>
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/card">About</Link>
+              </li>
+
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/form">Contact</Link>
+              </li>
+
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/tailwind">Learn Tailwind</Link>
               </li>
             </ul>
           </div>
-          {/* <div  className="hidden lg:block">
-      <button
-        type="button"
-        className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-      >
-        Button text
-      </button>
-    </div> */}
+       
           <div className="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
