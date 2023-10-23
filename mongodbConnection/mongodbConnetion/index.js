@@ -1,7 +1,6 @@
 const { MongoClient } = require("mongodb")
 // const url = 'mongodb://localhost:27017'
-const url= 'mongodb://127.0.0.1:27017'
-// const url = 'mongodb+srv://<credentials>@cluster0.bbebs8u.mongodb.net' //mongodb atlas cloud database 
+const url= 'mongodb://127.0.0.1:27017' 
 const database= 'blog'
 const collection1= 'posts'
 
