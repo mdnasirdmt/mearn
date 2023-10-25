@@ -1,16 +1,13 @@
-import Card from "./components/Card";
-import OurTeam from "./components/OurTeam";
-import SignIn from "./components/SignIn";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Card from "./pages/Card";
+import OurTeam from "./pages/OurTeam";
+import SignIn from "./pages/SignIn";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Form from "./pages/Form";
+import Tailwind from "./pages/Tailwind";
 import Navbar from "./components/Navbar";
-import Form from "./components/Form";
-import Tailwind from './components/Tailwind'
-import {Routes, Route} from 'react-router-dom'
-
-
-
-
 
 function App() {
   let username = [
@@ -21,28 +18,24 @@ function App() {
   ];
 
   return (
-    <>
-      {/* <Navbar />
-      <SignUp />
-      <SignIn />
-      <Login />
-      <OurTeam usernames={username} />
-      <Card />
-      <Form />
-      <Tailwind/> */}
+    <div className='App'>
+      <header>
+        <h1 className='text-center m-2 text-slate-600'>Al Habibi Come  To Dubai</h1>
+        <Navbar />
+      </header>
 
       <Routes>
-        <Route path="/" element={<Navbar />} />
+        <Route path="/" element={<OurTeam usernames={username} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/ourteam" element={<OurTeam usernames={username} />} />
         <Route path="/card" element={<Card />} />
         <Route path="/form" element={<Form />} />
         <Route path="/tailwind" element={<Tailwind />} />
+        <Route path="/*" element={<div className='text-center m-5'> Page Not Found 404 Error</div>} />
+
       </Routes>
-      
-    </>
+    </div>
   );
 }
 
