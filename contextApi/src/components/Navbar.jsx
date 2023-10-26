@@ -8,13 +8,13 @@ const Navbar = () => {
         <nav>
           <ul className=" text-center font-bold text-5xl flex gap-5 bg-slate-500 text-slate-200 justify-evenly">
             <Link to="/">
-              <li>Home</li>
+              <li className="hover:text-blue-200">Home</li>
             </Link>
-            <Link to="/Header">
-              <li>Header</li>
-            </Link>
+            {/* <Link to="/Header">
+              <li  className="hover:text-blue-200">Header</li>
+            </Link> */}
             <Link to="/Footer">
-              <li>Footer</li>
+              <li  className="hover:text-blue-200">Footer</li>
             </Link>
           </ul>
         </nav>
