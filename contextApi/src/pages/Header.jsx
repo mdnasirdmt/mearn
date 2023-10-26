@@ -30,9 +30,9 @@ const Header = () => {
         This Is Header 
       </div>
       <h1 className="text-blue-500 text-center font-bold text-5xl">{user}</h1>
-      <div>
+      <div className=" ">
         {picList.map((pic, index) => (
-          <div key={index} className="w-1/3 p-4   gap-2 ">
+          <div key={index} className=" p-5 gap-2 ">
             <img
               style={{ width: "300px", height: "300px" }}
               src={pic.download_url}

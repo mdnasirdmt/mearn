@@ -59,3 +59,5 @@ for font awesome goto website below or copy 2nd link and paste it to html head
 2.  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
  
+# React-toastify
+https://fkhadra.github.io/react-toastify/introduction
