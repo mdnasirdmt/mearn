@@ -50,6 +50,9 @@ const Navbar = () => {
               <li className="text-sm font-semibold text-black hover:text-blue-700">
                 <Link to="/tailwind">Learn Tailwind</Link>
               </li>
+              <li className="text-sm font-semibold text-black hover:text-blue-700">
+                <Link to="/BgChanger">Background Changer</Link>
+              </li>
             </ul>
           </div>
        
