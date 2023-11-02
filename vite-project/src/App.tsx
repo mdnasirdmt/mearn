@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Card from "./pages/Card";
 import OurTeam from "./pages/OurTeam";
@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import Form from "./pages/Form";
 import Tailwind from "./pages/Tailwind";
 import Navbar from "./components/Navbar";
+import BgChanger from "./pages/BgChanger";
 
 function App() {
   let username = [
@@ -18,10 +19,13 @@ function App() {
   ];
 
   return (
-    <div className='App'>
+    <div className="App">
       <header>
-        <h1 className='text-center m-2 text-slate-600'>Al Habibi Come  To Dubai</h1>
+        <h1 className="text-center m-2 text-slate-600">
+          Al Habibi Come To Dubai
+        </h1>
         <Navbar />
+        {/* <BgChanger /> */}
       </header>
 
       <Routes>
@@ -32,8 +36,14 @@ function App() {
         <Route path="/card" element={<Card />} />
         <Route path="/form" element={<Form />} />
         <Route path="/tailwind" element={<Tailwind />} />
-        <Route path="/*" element={<div className='text-center m-5'> Page Not Found 404 Error</div>} />
+        <Route path="/bgChanger" element={<BgChanger />} />
 
+        <Route
+          path="/*"
+          element={
+            <div className="text-center m-5"> Page Not Found 404 Error</div>
+          }
+        />
       </Routes>
     </div>
   );
